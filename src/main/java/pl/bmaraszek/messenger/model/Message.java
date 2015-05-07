@@ -2,6 +2,12 @@ package pl.bmaraszek.messenger.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Message {
 
     private long id;
@@ -20,6 +26,7 @@ public class Message {
         this.author = author;
     }
     
+    @XmlAccessorType(XmlAccessType.FIELD)
     public static class MessageText{
         private String text;
         
@@ -36,19 +43,20 @@ public class Message {
         }
     }
     
+    @XmlAccessorType(XmlAccessType.FIELD)
     public static class Author{
-        private String author;
+        private String name;
         
         public Author(String author){
-            this.author = author;
+            this.name = author;
         }
         
         public String getAuthor(){
-            return author;
+            return name;
         }
         
         public String toString(){
-            return author;
+            return name;
         }
     }
 
@@ -67,7 +75,7 @@ public class Message {
     public Author getAuthor() {
         return author;
     }
-    
+
     public String toString(){
         return "Message{ id : " + id + ", message : " + message + ", created : " + created + ", author : " + author + " }"; 
     }
