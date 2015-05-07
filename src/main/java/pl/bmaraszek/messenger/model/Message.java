@@ -9,6 +9,10 @@ public class Message {
     private Date created;
     private Author author;
     
+    public Message(){
+        
+    }
+    
     public Message(long id, MessageText message, Date created, Author author){
         this.id = id;
         this.message = message;
