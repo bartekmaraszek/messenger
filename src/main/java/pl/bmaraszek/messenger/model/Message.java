@@ -15,8 +15,14 @@ public class Message {
     private Date created;
     private Author author;
     
+    /**
+     * For JAXB only:
+     */
     public Message(){
-        
+        this.id = 0;
+        message = new MessageText("Invalid");
+        created = null;
+        author = new Author("Invalid");
     }
     
     public Message(long id, MessageText message, Date created, Author author){
