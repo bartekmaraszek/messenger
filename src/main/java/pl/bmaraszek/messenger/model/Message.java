@@ -16,7 +16,7 @@ public class Message {
         this.author = author;
     }
     
-    public class MessageText{
+    public static class MessageText{
         private String text;
         
         public MessageText(String text){
@@ -32,7 +32,7 @@ public class Message {
         }
     }
     
-    public class Author{
+    public static class Author{
         private String author;
         
         public Author(String author){
