@@ -8,7 +8,7 @@ import pl.bmaraszek.messenger.model.Message;
 
 public class MessageService {
 
-    public List<Message> getMessages(){
+    public List<Message> getAllMessages(){
         ArrayList<Message> result = new ArrayList<Message>();
         Calendar c = Calendar.getInstance();
         
