@@ -16,8 +16,8 @@ public class MessageService {
     
     public MessageService(){
         messages.put(1L, new Message(1, new MessageText("text 1"), new Date(), new Author("Bartek")));
-        messages.put(2L, new Message(2, new MessageText("text 1"), new Date(), new Author("Bob")));
-        messages.put(3L, new Message(3, new MessageText("text 1"), new Date(), new Author("Alice")));
+        messages.put(2L, new Message(2, new MessageText("text 2"), new Date(), new Author("Bob")));
+        messages.put(3L, new Message(3, new MessageText("text 3"), new Date(), new Author("Alice")));
     }
 
     public List<Message> getAllMessages() {
