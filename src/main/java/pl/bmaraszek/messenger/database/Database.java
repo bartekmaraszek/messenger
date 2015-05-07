@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import pl.bmaraszek.messenger.model.Message;
+import pl.bmaraszek.messenger.model.Profile;
 
 public class Database {
 
@@ -15,6 +16,6 @@ public class Database {
     }
 
     public static Map<Long, Profile> getProfiles() {
-
+        return profiles;
     }
 }
