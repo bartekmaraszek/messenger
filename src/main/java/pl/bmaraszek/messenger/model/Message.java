@@ -11,21 +11,21 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Message {
 
     private long id;
-    private MessageText message;
+    private String message;
     private Date created;
-    private Author author;
+    private String author;
     
     /**
      * For JAXB only:
      */
     public Message(){
         this.id = 0;
-        message = new MessageText("Invalid");
+        message = "Invalid";
         created = null;
-        author = new Author("Invalid");
+        author = "Invalid";
     }
     
-    public Message(long id, MessageText message, Date created, Author author){
+    public Message(long id, String message, Date created, String author){
         this.id = id;
         this.message = message;
         this.created = created;
@@ -70,7 +70,7 @@ public class Message {
         return id;
     }
 
-    public MessageText getMessage() {
+    public String getMessage() {
         return message;
     }
 
@@ -78,7 +78,7 @@ public class Message {
         return created;
     }
 
-    public Author getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
