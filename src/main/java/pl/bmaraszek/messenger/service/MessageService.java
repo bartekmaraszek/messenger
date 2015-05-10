@@ -27,8 +27,8 @@ public class MessageService {
     }
 
     public Message addMessage(Message message) {
-        Message toAdd = new Message(message.getId() + 1, message.getMessage(), message.getCreated(), message.getAuthor());
-        messages.put(toAdd.getId(), message);
+        Message toAdd = new Message(messages.size() + 1, message.getMessage(), message.getCreated(), message.getAuthor());
+        messages.put(toAdd.getId(), toAdd);
         return toAdd;
     }
 
